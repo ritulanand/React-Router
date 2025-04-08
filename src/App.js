@@ -9,6 +9,8 @@ import About from "./pages/About";
 import Items from "./pages/Items";
 import Navbar from "./components/Navbar";
 import ItemDetails from "./pages/ItemDetails";
+import ErrorPage from "./pages/ErrorPage";
+
 
 function App() {
 
@@ -32,6 +34,7 @@ function App() {
     //   ]
     // }
     { path: "/", element: <Navbar /> ,
+      errorElement : <ErrorPage />,
       children : [
         { index : true, element: <Home /> }, // it will go to / route by using index: true
         { path: "about", element: <About /> }, //relative path

@@ -7,6 +7,10 @@ function ItemDetails() {
     const {id} = useParams();
     const item = ITEMS.find((item) => item.id == id);
     console.log("item", item);
+    if (!item) {
+        return <h3> Item details not found.</h3>;
+      }
+      
   return (
     <>
     <main><h1>ItemDetails</h1></main>
